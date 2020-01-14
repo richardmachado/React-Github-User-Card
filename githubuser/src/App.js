@@ -5,22 +5,21 @@ import Nav from "./components/layout/Nav";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 
+
 class App extends React.Component {
-  // to initialize date we need a constructor create in the memory
   constructor() {
-    // super is a special function that allows us to get access to the React.Component lifecycle methods
     super();
     this.state = {
       username: "richardmachado",
-      followers: []
+      followers: ['']
     };
   }
-  // it runs just for once
+
   componentDidMount() {
     this.fetchUserData();
     this.fetchFollowersData();
   }
-  // whenever the state of the username change this function runs
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.username !== this.state.username) {
       this.fetchUserData();

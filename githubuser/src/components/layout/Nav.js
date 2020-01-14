@@ -14,7 +14,7 @@ import SearchIcon from "@material-ui/icons/Search";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1
+      flexGrow: 2
     },
     menuButton: {
       marginRight: theme.spacing(2)
@@ -73,16 +73,8 @@ export default function Nav() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton> */}
           <Typography className={classes.title} variant="h6" noWrap>
-            GitHup Personal Information
+            GitHup User Cards
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
